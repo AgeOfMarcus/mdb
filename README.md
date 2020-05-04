@@ -13,6 +13,7 @@ Sorry, `mdb` was taken
     keys = mdb.generate()
     # {"priv":"XXXXXXXX", "pub":"XXXXXXXXX"}
     # tip: the public key is just a hashed version of the private key [sha256(sha256(key) + salt)]
+    # protip: you can choose your own key using mdb.register("YOUR_TOKEN_HERE"), but remember - if your token isn't secure, someone could crack the hash
 
     privclient = mdb.Client(keys['priv'])
     pubclient = mdb.Client(keys['pub'])

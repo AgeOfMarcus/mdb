@@ -3,6 +3,9 @@ import requests, jsonpickle
 def generate(base="https://db.marcusweinberger.repl.co"):
     return requests.get(base + "/generate").json()
 
+def register(token, base="https://db.marcusweinberger.repl.co"):
+    return requests.post(base+"/register", data={'token':token}).json()
+
 class Client(object):
     def __init__(self, token, base="https://db.marcusweinberger.repl.co"):
         self.base = base
