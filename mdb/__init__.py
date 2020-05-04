@@ -10,7 +10,7 @@ class Client(object):
     
     def _res(self, r):
         try:
-            return jsonpickle.loads(r.content.decode())
+            return jsonpickle.loads(r.json())
         except:
             try:
                 return r.json()
