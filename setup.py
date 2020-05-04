@@ -5,7 +5,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setuptools.setup(name="marcusdb",
-    version="1.0.0",
+    version="1.0.1",
     description="A python library for https://db.marcusweinberger.repl.co/",
     long_description=read("README.md"),
     url="https://github.com/AgeOfMarcus/mdb",
